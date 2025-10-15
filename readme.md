@@ -35,17 +35,3 @@ CREATE TABLE IF NOT EXISTS foods (
     FOREIGN KEY (food_type_id) REFERENCES food_types(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 ```
-
-## Használat
-
-1. Hozz létre egy `restaurant_db` nevű adatbázist
-2. Futtasd a fenti SQL parancsokat a táblák létrehozásához
-3. Indítsd el az alkalmazást a böngészőben
-
-## Technológiai stack
-
-- **Backend**: PHP 8+ (objektumorientált)
-- **Adatbázis**: MySQL/MariaDB
-- **Frontend**: HTML, CSS, JavaScript
-- **Architektúra**: MVC pattern
-
