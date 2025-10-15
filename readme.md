@@ -1,4 +1,4 @@
-# 🍽️ Éttermi Menükezelő Alkalmazás
+# Éttermi Menükezelő Alkalmazás
 
 Objektumorientált PHP alkalmazás éttermi menü kezelésére adatbáziskezeléssel, végpontkezeléssel, HTML felülettel.
 
