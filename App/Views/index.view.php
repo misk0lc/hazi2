@@ -119,7 +119,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🍽️ Éttermi Menükezelő</h1>
+        <h1>Éttermi Menükezelő</h1>
 
         <h2>Új ételtípus hozzáadása</h2>
         <form action="" method="post">
