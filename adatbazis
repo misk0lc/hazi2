@@ -1,3 +1,5 @@
+git clone https://github.com/misk0lc/hazi2.git
+
 CREATE TABLE IF NOT EXISTS food_types (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL
