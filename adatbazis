@@ -1,0 +1,35 @@
+CREATE TABLE IF NOT EXISTS food_types (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS foods (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    food_type_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    ingredients TEXT,
+    price DECIMAL(6,2) DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (food_type_id) REFERENCES food_types(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+INSERT INTO food_types (name) VALUES
+('Levesek'),
+('Főételek'),
+('Desszertek'),
+('Saláták'),
+('Italok');
+
+INSERT INTO foods (food_type_id, name, description, ingredients, price) VALUES
+(1, 'Gulyásleves', 'Hagyományos magyar gulyás marhahússal és zöldségekkel.', 'marhahús, burgonya, sárgarépa, paprika, hagyma', 1500),
+(1, 'Húsleves', 'Tiszta húsleves zöldségekkel és tésztával.', 'csirkehús, sárgarépa, zeller, tészta', 1200),
+(2, 'Rántott csirkemell', 'Ropogós rántott csirkemell burgonyapürével.', 'csirkemell, liszt, tojás, zsemlemorzsa, burgonya', 2500),
+(2, 'Marhapörkölt', 'Lassan főzött marhapörkölt galuskával.', 'marhahús, hagyma, paprika, paradicsom, galuska', 2800),
+(3, 'Somlói galuska', 'Háromféle piskóta, csokoládéöntet és tejszínhab.', 'piskóta, dió, csokoládé, tejszínhab, rum', 1000),
+(3, 'Túrós palacsinta', 'Édes túróval töltött palacsinta vaníliaszósszal.', 'palacsinta, túró, cukor, vanília', 900),
+(4, 'Cézár saláta', 'Friss római saláta csirkével és cézár öntettel.', 'római saláta, csirkemell, parmezán, kruton, cézár öntet', 1800),
+(4, 'Görög saláta', 'Klasszikus görög saláta feta sajttal.', 'paradicsom, uborka, olívabogyó, feta sajt, hagyma', 1600),
+(5, 'Limonádé', 'Frissítő citromos ital mentával.', 'citrom, cukor, víz, menta', 600),
+(5, 'Jeges kávé', 'Hideg kávé jégkockával és tejjel.', 'kávé, tej, cukor, jég', 700);
